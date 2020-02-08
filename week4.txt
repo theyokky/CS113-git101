@@ -1,3 +1,4 @@
+สรุป week4
 - Function Definition
 	รูปแบบดังนี้
 		    return-value-type function-name (parameter-list)
