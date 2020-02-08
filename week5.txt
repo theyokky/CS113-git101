@@ -1,0 +1,18 @@
+-funktion call และ stack frames
+	Frame pointers
+		โดยทั่วไป ฟังก์ชันมีขั้นตอนวิธีการจัดเก็บ ตัวแปรพารามิเตอร์ที่รับข้อมูลเข้ามา, ตัวแปร local, และบางกรณียังมีตัวแปรที่ไว้ถูกใช้งานโดยชั่วคราว บริเวณที่เก็บตัวแปรเหล่าเรียกว่า stack frame ซึ่งถูกจัดเก็บอยู่ภายใน stack ของ process
+		เช่น 
+    	 int bar(int a, int b)
+    	 {  int x, y;
+
+      	  x = 444;
+       	 y = a + b;
+      	  return y;
+    	 }
+
+    	 void foo()
+    	 {  int result;
+
+    	    result = 1;
+      	    result = bar(111, 222);
+ 	   }

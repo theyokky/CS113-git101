@@ -1,0 +1,81 @@
+-Relational Operators และ Logical Operators
+	Relational Operators
+		ได้แก่ > , >= , < , <= , == , !=
+	Logical Operators
+		ได้แก่ && , || , !
+- Increment and Decrement Operators
+	เช่น n++ , ++n , n-- , --n
+- Bitwise Operators
+	ได้แก่
+		AND		&
+		Inclusive OR	|
+		Exclusive OR	^
+		Left shift	<<
+		Right shift	>>
+		One’s complement	~  
+
+
+
+
+
+- Statements and Blocks
+	Expression กลายเป็น statement เมื่อถูกปิดท้ายด้วย ;
+	เครื่องหมายปีกกา {} ใช้รวมส่วนของ declarations และ statements เข้าด้วยกันเป็น block
+-if-else
+	เช่น
+   		if (expression)
+      			statement1
+  		else 
+      			statement2
+-else-if
+	เช่น
+		   if (expression1)
+      			statement1
+   		   else if (expression2)
+      			statement2
+   		   else if (expression3)
+      			statement3
+   		   else if (expression4)
+     			statement4
+   		   else
+      			statement5
+
+
+
+
+
+-switch
+	เช่น
+		   switch (expression) {
+      			case const-expr: 
+         				statements
+      			case const-expr:
+        				statements
+      			default: 
+         				statements
+   		}
+-loops-while และ for
+	รูปแบบของ while
+	   	while (expression) 
+      			statement
+	รูปแบบของ for
+	    	for (expr1; expr2; expr3)
+       			statement
+
+    		มีลักษณะเดียวกับ
+expr1;
+    			while (expr2) {
+       			statement
+       		expr3;
+    		}
+
+
+-loops-do-while
+	    do
+       		statement
+   		while (expression);
+
+    ซึ่งส่วนใหญ่เรามักจะเห็นในรูปนี้
+    	   do {
+       		statement
+    		} while (expression);

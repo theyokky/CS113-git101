@@ -1,0 +1,15 @@
+- Function Definition
+	รูปแบบดังนี้
+		    return-value-type function-name (parameter-list)
+    		   {
+       			declarations
+   
+       			statement
+       			statement
+       			:
+    		   }
+
+
+
+
+

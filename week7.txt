@@ -1,0 +1,21 @@
+-pointer
+	พอนย์เตอร์ (pointer) คือตัวแปรที่เก็บค่าของที่อยู่ของข้อมูลของตัวแปร การใช้พอนย์เตอร์จะทำให้เราสามารถเข้าถึงข้อมูลได้โดยตรงโดยใช้ที่อยู่ของหน่วยความจำ แทนที่จะใช้ชื่อของตัวแปรที่เราได้ใช้ในบทก่อนหน้านี้ พอนย์เตอร์มีประโยนช์สำหรับ low-level programming เช่นการเขียนโปรแกรมในภาษา C
+	เช่น
+	
+#include <stdio.h>
+
+int main()
+{
+    int number = 10;
+    float money = 34.8;
+
+    int *p1 = &number;
+    float *p2;
+    p2 = &money;
+
+    printf("p1 address = %x\n", p1);
+    printf("p1 value = %d\n", *p1);
+    printf("p2 address = %x\n", p2);
+    printf("p2 value = %f\n", *p2);
+    return 0;
+}
