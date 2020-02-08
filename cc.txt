@@ -1,0 +1,171 @@
+สรุป  01418113 
+Computer Programming
+-ชื่อตัวแปร
+	คำนึงเรื่อง readability ให้อ่านเข้าใจง่ายและตั้งให้ถูกไวยากรณ์ของภาษา C สามารถนำไปใช้ในการตั้งชื่อฟังก์ชันได้อีกด้วย
+-ประเภทข้อมูลและขนาด
+	-char , int , float , double
+	-short int , unsigned char
+	-sined char , unsigned char
+	-สามารใช้ sizeof ในการตรวจสอบขนาดตัวแปรและประเภทข้อมูลได้
+-การประกาศ
+	ตัวแปรในภาษา C ต้องถูกประกาศก่อนใช้งานเสมอ เช่น
+		Int lower , upper , step;
+		Char c , line[1000];
+-printf() and puts()
+	ใช้สำหรับแสดงข้อความหรือตัวแปร
+	และยังมี format specification เช่น
+	%d	ให้พิมพ์เลขจำนวนเต็ม
+	%f	ให้พิมพ์เลขทศนิยม
+	%c	ให้พิมพ์ตัวอักษรตัวเดียว
+	%s	ให้พิมพ์ชุดตัวอักษร
+	%%	ให้พิมพ์เครื่องหมาย %
+	%o	ให้พิมพ์เลขฐานแปด
+	%x	ให้พิมพ์เลขฐานสิบหก
+
+
+-character input and output
+	getchar() ใช้รับอักขระ 1 ตัวจาก stdin เข้ามา
+	putchar() ใช้ส่งอักขระ 1 ตัวไปยัง stdout
+-Arithmetic Operators
+	+ , - , * , / , %
+	% ไม้สามารถใช้กับ float , double
+-Relational Operators และ Logical Operators
+	Relational Operators
+		ได้แก่ > , >= , < , <= , == , !=
+	Logical Operators
+		ได้แก่ && , || , !
+- Increment and Decrement Operators
+	เช่น n++ , ++n , n-- , --n
+- Bitwise Operators
+	ได้แก่
+		AND		&
+		Inclusive OR	|
+		Exclusive OR	^
+		Left shift	<<
+		Right shift	>>
+		One’s complement	~  
+
+
+
+
+
+- Statements and Blocks
+	Expression กลายเป็น statement เมื่อถูกปิดท้ายด้วย ;
+	เครื่องหมายปีกกา {} ใช้รวมส่วนของ declarations และ statements เข้าด้วยกันเป็น block
+-if-else
+	เช่น
+   		if (expression)
+      			statement1
+  		else 
+      			statement2
+-else-if
+	เช่น
+		   if (expression1)
+      			statement1
+   		   else if (expression2)
+      			statement2
+   		   else if (expression3)
+      			statement3
+   		   else if (expression4)
+     			statement4
+   		   else
+      			statement5
+
+
+
+
+
+-switch
+	เช่น
+		   switch (expression) {
+      			case const-expr: 
+         				statements
+      			case const-expr:
+        				statements
+      			default: 
+         				statements
+   		}
+-loops-while และ for
+	รูปแบบของ while
+	   	while (expression) 
+      			statement
+	รูปแบบของ for
+	    	for (expr1; expr2; expr3)
+       			statement
+
+    		มีลักษณะเดียวกับ
+expr1;
+    			while (expr2) {
+       			statement
+       		expr3;
+    		}
+
+
+-loops-do-while
+	    do
+       		statement
+   		while (expression);
+
+    ซึ่งส่วนใหญ่เรามักจะเห็นในรูปนี้
+    	   do {
+       		statement
+    		} while (expression);
+- Function Definition
+	รูปแบบดังนี้
+		    return-value-type function-name (parameter-list)
+    		   {
+       			declarations
+   
+       			statement
+       			statement
+       			:
+    		   }
+
+
+
+
+
+
+
+-funktion call และ stack frames
+	Frame pointers
+		โดยทั่วไป ฟังก์ชันมีขั้นตอนวิธีการจัดเก็บ ตัวแปรพารามิเตอร์ที่รับข้อมูลเข้ามา, ตัวแปร local, และบางกรณียังมีตัวแปรที่ไว้ถูกใช้งานโดยชั่วคราว บริเวณที่เก็บตัวแปรเหล่าเรียกว่า stack frame ซึ่งถูกจัดเก็บอยู่ภายใน stack ของ process
+		เช่น 
+    	 int bar(int a, int b)
+    	 {  int x, y;
+
+      	  x = 444;
+       	 y = a + b;
+      	  return y;
+    	 }
+
+    	 void foo()
+    	 {  int result;
+
+    	    result = 1;
+      	    result = bar(111, 222);
+ 	   }
+-pointer
+	พอนย์เตอร์ (pointer) คือตัวแปรที่เก็บค่าของที่อยู่ของข้อมูลของตัวแปร การใช้พอนย์เตอร์จะทำให้เราสามารถเข้าถึงข้อมูลได้โดยตรงโดยใช้ที่อยู่ของหน่วยความจำ แทนที่จะใช้ชื่อของตัวแปรที่เราได้ใช้ในบทก่อนหน้านี้ พอนย์เตอร์มีประโยนช์สำหรับ low-level programming เช่นการเขียนโปรแกรมในภาษา C
+	เช่น
+	
+#include <stdio.h>
+
+int main()
+{
+    int number = 10;
+    float money = 34.8;
+
+    int *p1 = &number;
+    float *p2;
+    p2 = &money;
+
+    printf("p1 address = %x\n", p1);
+    printf("p1 value = %d\n", *p1);
+    printf("p2 address = %x\n", p2);
+    printf("p2 value = %f\n", *p2);
+    return 0;
+}
+-linked list
+	Link list นั้นจะเก็บ address ขอช่องที่ติดกันอยู่ด้วย สามารถมีทั้งแบบ ทางเดียวและแบบไปกลับได้
+
