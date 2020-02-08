@@ -1,3 +1,4 @@
+สรุป week3
 -Relational Operators และ Logical Operators
 	Relational Operators
 		ได้แก่ > , >= , < , <= , == , !=
