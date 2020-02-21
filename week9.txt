@@ -1,0 +1,44 @@
+struct
+ในภาษา C การประกาศโครงสร้างข้อมูลมีรูปแบบดังนี้
+
+struct struct_name
+{
+    member_type1 member_name1;
+    member_type2 member_name2;
+    member_type3 member_name3;
+    .
+    .
+} object_names;
+
+เราใช้คำสั่ง struct ในการประกาศโครงสร้างข้อมูล struct_name เป็นชื่อของโครงสร้างข้อมูลโดยมีรูปแบบการตั้งชื่อเหมือนตัวแปร คือเป็นตัวอักษร ตัวเลข และเครื่องหมาย underscore (_) และต้องไม่ขึ้นต้นด้วยตัวเลข ในบล็อคของ structure จะเป็นการประกาศสมาชิก (members) ซึ่งสามารถเป็นได้ทั้งตัวแปรและฟังก์ชัน สำหรับ object_names เป็นตัวแปรออบเจ็คของโครงสร้างข้อมูล ซึ่งเป็นทางเลือกในการประกาศ มาดูตัวอย่าง
+
+struct person
+{
+    char name[20];
+    int age;
+    float money;
+} student, teacher;
+ในตัวอย่าง เราได้สร้างโครงสร้างข้อมูลชื่อว่า person โดยมีสมาชิก 3 ตัว โดยเป็นตัวแปรที่เก็บข้อมูลประเภทต่างๆ ที่เป็น name, age และ money สำหรับสมาชิกของโครงสร้างข้อมูล คุณไม่สามารถกำหนดค่าเริ่มต้นเหมือนการประกาศตัวแปรได้ และเราได้สร้างตัวแปรออบเจ็คของโครงสร้างข้อมูลนี้คือ student และ teacher อย่างไรก็ตามเราสามารถสร้างตัวแปรออบเจคนี้ได้ภายหลังเมื่อตอนโปรแกรมรัน โดยใช้คำสั่ง
+
+struct person student, teacher;
+
+linked list
+
+สามาร5เขียนเป็นโครงสร้างด้วย Struct ได้ประมาณนี้
+
+struct linkedlist{
+ int data;
+ struct likedlist *next;
+};
+
+หรือ 
+
+int main(){
+    linkedList node1 = {1, NULL};
+    linkedList node2 = {2, NULL};
+    linkedList node3 = {3, NULL};
+    node1.next = &node2;
+    node2.next = &node3;
+    
+    return 0;
+}
